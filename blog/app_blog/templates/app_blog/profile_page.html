@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+{% load post_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    {% if request.user.is_authenticated %}
+    <div class="content">
+        <div class="profile-info">
+            <h3>Информация о юзере</h3>
+            <p>Имя: {{ request.user.user.name }}</p>
+            <p>Email: {{ request.user.user.email }}</p>
+        </div>
+
+
+        <div class="create-post">
+            <a href="{% url 'app_blog:create_post' %}"
+            >Создать новый пост</a>
+        </div>
+            {% all_post_list pk=request.user.user as posts %}
+            {% for post in posts %}
+                <div class="post-list">
+                    <p><h2>Заголовок:</h2> {{ post.title }}</p>
+                    <p><h5>Текст:</h5> {{ post.body }}</p>
+                    <p>Дата: {{ post.created_at }}</p>
+                    <a href="{% url 'app_blog:post_delete' post_id=post.pk%}"
+                    >Удалить пост</a>
+                </div>
+            {% endfor %}
+    </div>
+
+    {% else %}
+        <h1>Вы не вошли в аккаунт.</h1>
+        <a href="{% url 'app_blog:login' %}"
+        >Войти</a>
+    {% endif %}
+
+    <div class="footer">
+        <a href="{% url 'app_blog:profile_list' %}"
+        >К списку юзеров</a>
+    </div>
+
+</body>
+</html>

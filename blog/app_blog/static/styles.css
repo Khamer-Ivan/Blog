@@ -1,0 +1,139 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.record {
+    display: block;
+    margin-bottom: 10px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    margin-top: 20px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+form {
+    margin-top: 20px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+h2 {
+    color: #007bff;
+}
+
+form {
+    margin-top: 20px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #007bff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #007bff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-form, .registration-form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.header {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.profile-info {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    line-height: 3.5;
+}
+
+.create-post {
+    margin-bottom: 20px;
+}
+
+.post-list {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+}

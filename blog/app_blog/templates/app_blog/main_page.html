@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    {% if request.user.is_authenticated %}
+        <h3>Добро пожаловать {{ request.user.user.name }}</h3>
+        <div>
+            <a href="{% url 'app_blog:profile_list' %}"
+            >Список всех юзеров</a>
+        </div>
+
+        <div>
+            <a href="{% url 'app_blog:profile' %}"
+            >Страница профиля</a>
+        </div>
+    {% else %}
+        <h3>Вы ещё не вошли в свой профиль</h3>
+        <a href="{% url 'app_blog:login' %}">Войти</a>
+
+    {% endif %}
+    <h2>This is a main page!</h2>
+</body>
+</html>

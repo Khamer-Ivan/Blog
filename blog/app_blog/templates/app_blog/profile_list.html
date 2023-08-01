@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Profile List</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Profile List</h1>
+    <ul>
+        {% for profile in profiles %}
+            <li>
+                Name: {{ profile.name }}
+                <a href="{% url 'app_blog:user_detail' pk=profile.id %}"
+                >Перейти на страницу юзера</a><br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
